@@ -1,7 +1,5 @@
 package Ex03q02;
 
-import java.lang.reflect.Method;
-
 public class Innings {
     private String teamname;
     private String inningsname;

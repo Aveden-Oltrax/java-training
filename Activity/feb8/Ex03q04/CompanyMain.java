@@ -11,13 +11,18 @@ public class CompanyMain {
         String employees = sc.nextLine();
 
         String arr_emp[] = employees.split(",");
+
         System.out.println("Enter Team lead name");
         String team_lead = sc.nextLine();
+        
         Company c = new Company();
+
         c.setName(company);
         c.setEmployees(employees);
         c.setTeamlead(team_lead);
+
         boolean result = new CompanyMain().check(arr_emp, c.getTeamlead());
+
         if (!(result)) {
             System.out.println("Invalid");
         } else {

@@ -9,7 +9,7 @@ public class InningsMain {
 
         System.out.println("Enter Innings Name: ");
         inn1.setInningsname(in.nextLine());
-        System.out.println("Enter Team Name: ");
+        System.out.println("Enter Team Name : ");
         inn1.setTeamname(in.nextLine());
         System.out.println("Enter Runs: ");
         inn1.setRuns(in.nextInt());
