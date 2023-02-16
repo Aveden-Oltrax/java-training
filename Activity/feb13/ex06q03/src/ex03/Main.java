@@ -36,6 +36,7 @@ public class Main {
 		for (String player : common) {
 		  System.out.println(player);
 		}
+		sc.close();
 	}
 
 }

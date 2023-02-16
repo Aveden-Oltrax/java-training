@@ -19,7 +19,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 
         // Get the number of matches
-        int n = scanner.nextInt();
+        int n = scanner.nextInt();	
 
         // Create a TreeSet to store the distinct player names
         TreeSet<String> players = new TreeSet<>();
