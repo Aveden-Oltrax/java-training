@@ -23,6 +23,7 @@ import jakarta.servlet.http.HttpServletRequest;
  */
 @RestController
 public class Controller {
+	
 	@Autowired
 	MovieDAO md;
 
@@ -52,6 +53,30 @@ public class Controller {
 		ModelAndView mv = new ModelAndView("viewallmovies");
 		List<Movie> li = md.findAll();
 		mv.addObject("movies",li);
+		return mv;
+	}
+	
+	@RequestMapping("viewmoviebylaguage")
+	public ModelAndView viewMoviesByLang(String lang) {
+		ModelAndView mv = new ModelAndView("viewbylang");
+		List<Movie> li = md.findMovieByLanguage(lang);
+		mv.addObject("movies", li);
+		mv.addObject("lang",lang);
+		return mv;
+	}
+//	
+//	@RequestMapping("deleteMovie")
+//	public void delMovie(@RequestParam("movieId") int movieId ) {
+//		ModelAndView mv = new ModelAndView("viewallMovies");
+//		md.deleteMovieById(movieId);
+//	}
+	
+	@RequestMapping("editMovie")
+	public ModelAndView getMovieById(@RequestParam("id") int id) {
+		ModelAndView mv = new ModelAndView("editMovie");
+		Movie m = md.getById(id);
+		
+		mv.addObject("movie", m);
 		return mv;
 	}
 

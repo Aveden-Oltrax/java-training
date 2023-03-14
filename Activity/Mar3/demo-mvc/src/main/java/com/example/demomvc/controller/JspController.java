@@ -83,7 +83,7 @@ public class JspController {
 		UserDAO ud = new UserDAO();
 		ud.save(user);
 		
-		ModelAndView mv = new ModelAndView("success.jsp");
+		l
 		if (name.length() >= 1) {
 			mv.addObject("value1", name);
 		} else {
