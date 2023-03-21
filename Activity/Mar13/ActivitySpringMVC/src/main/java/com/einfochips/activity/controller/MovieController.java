@@ -32,7 +32,7 @@ public class MovieController {
 	}
 
 	@RequestMapping("/bookTicket")
-	public ModelAndView addMovie() {
+	public ModelAndView addMovie() { 
 		return new ModelAndView("bookticket");
 	}
 
@@ -47,8 +47,6 @@ public class MovieController {
 		String noOfTickets = req.getParameter("integer");
 		
 		System.out.println(mob+ mname + date+ showTime +ticketType + noOfTickets);
-		
-		
 		
 		return false;
 
