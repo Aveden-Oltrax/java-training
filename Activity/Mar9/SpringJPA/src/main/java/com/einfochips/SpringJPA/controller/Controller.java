@@ -65,19 +65,20 @@ public class Controller {
 		return mv;
 	}
 //	
-//	@RequestMapping("deleteMovie")
-//	public void delMovie(@RequestParam("movieId") int movieId ) {
-//		ModelAndView mv = new ModelAndView("viewallMovies");
-//		md.deleteMovieById(movieId);
-//	}
-	
-	@RequestMapping("editMovie")
-	public ModelAndView getMovieById(@RequestParam("id") int id) {
-		ModelAndView mv = new ModelAndView("editMovie");
-		Movie m = md.getById(id);
+	@RequestMapping("deleteMovie")
+	public void delMovie(@RequestParam("movieId") int movieId ) {
+		ModelAndView mv1 = new ModelAndView("viewallMovies");
+		md.deleteMovieById(movieId);
 		
-		mv.addObject("movie", m);
-		return mv;
 	}
+	
+//	@RequestMapping("editMovie")
+//	public ModelAndView getMovieById(@RequestParam("id") int id) {
+//		ModelAndView mv = new ModelAndView("editMovie");
+//		Movie m = md.getById(id);
+//		
+//		mv.addObject("movie", m);
+//		return mv;
+//	}
 
 }

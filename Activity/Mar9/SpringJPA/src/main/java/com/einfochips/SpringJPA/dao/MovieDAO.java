@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.einfochips.SpringJPA.model.Movie;
 
@@ -22,7 +23,7 @@ public interface MovieDAO extends JpaRepository<Movie,Integer>{
 	@Query("select m from Movie m where m.language= :lang")
 	List<Movie> findMovieByLanguage(@Param("lang") String lang);
 	
-	
-	@Query("delete from Movie m where m.id= mid")
-	void deleteMovieById(@Param("id") int mid);
+//	
+	@Query("delete m from Movie m where m.movieId= mid")
+	void deleteMovieById(@RequestParam("mid") int mid);
 }
